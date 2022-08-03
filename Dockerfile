@@ -1,6 +1,5 @@
 FROM jenkins/jenkins
-WORKDIR /usr/src/app
-COPY nodeapp/*
-RUN npm install
+WORKDIR /tmp
+COPY jenkins/jenkins/*
 EXPOSE 8080
 CMD [ "npm","start" ]
