@@ -12,7 +12,7 @@ pipeline {
         } 
          stage('Build-Image'){
             steps {
-                sh "docker build -t omprakashsurwase/tomcat ."
+                sh "docker build -t omprakashsurwase/tomcatomimage ."
             }
          }
  stage('login to dockerhub') {
@@ -22,7 +22,7 @@ pipeline {
         }
         stage('push image') {
             steps{
-                sh 'docker push omprakashsurwase/tomcat'
+                sh 'docker push omprakashsurwase/tomcatomimage'
             }
         }
     }
