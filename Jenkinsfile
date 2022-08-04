@@ -17,7 +17,7 @@ pipeline {
         }
         stage('push image') {
             steps{
-                sh 'docker push omprakashsurwase/mytomcat'
+                sh 'docker push omprakashsurwase/tomcat'
             }
         }
     }
