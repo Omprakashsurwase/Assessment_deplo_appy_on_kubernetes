@@ -10,6 +10,11 @@ pipeline {
                 sh "ls -lart ./*"
             }
         } 
+         stage('Build-Image'){
+            steps {
+                sh "docker build -t omprakashsurwase/tomcat ."
+            }
+         }
  stage('login to dockerhub') {
             steps{
                 sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
@@ -22,4 +27,3 @@ pipeline {
         }
     }
 }
-
