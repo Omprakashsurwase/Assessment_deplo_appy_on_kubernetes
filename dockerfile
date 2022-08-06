@@ -1,1 +1,2 @@
-FROM tomcat
+FROM alpine
+CMD ["echo", "Hello Team!"]
