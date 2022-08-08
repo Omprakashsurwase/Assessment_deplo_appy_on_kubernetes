@@ -17,7 +17,7 @@ spec:
          - name: pullsecret
          containers:
            - name: tomcat-container
-             image: "jenkins/jenkins"
+             image: "omprakashsurwase/tomcatomimage"
   replicas: 1
   selector:
     matchLabels:
